@@ -14,8 +14,7 @@ function compile(str) {
         l
       };
       stacks.push(last);
-    }
-    if (r !== -1 && last.l === r) {
+    } else if (r !== -1 && last.l === r) {
       console.log(++count, str.substring(last.i, j + 1));
       stacks.pop();
       last = stacks[stacks.length - 1];
